@@ -1,0 +1,100 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #1d1d1f;
+  background: #fff;
+  line-height: 1.6;
+}
+
+/* NAV */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid #e5e5e5;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 32px; height: 52px;
+}
+.nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+.nav-brand img { width: 28px; height: 28px; border-radius: 7px; }
+.nav-brand span { font-weight: 600; font-size: 17px; }
+.nav-links { display: flex; align-items: center; gap: 24px; }
+.nav-links a { text-decoration: none; color: #555; font-size: 15px; }
+.nav-links a:hover { color: #000; }
+.lang-btn {
+  background: none; border: 1px solid #ccc; border-radius: 20px;
+  padding: 4px 14px; font-size: 13px; cursor: pointer; color: #555;
+}
+.lang-btn:hover { border-color: #888; color: #000; }
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 24px 80px;
+  background: linear-gradient(160deg, #f5fff7 0%, #fff 60%);
+}
+.hero .app-icon {
+  width: 100px; height: 100px; border-radius: 22px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+  margin-bottom: 28px;
+}
+.hero h1 { font-size: 48px; font-weight: 700; letter-spacing: -0.5px; }
+.hero .tagline { font-size: 20px; color: #555; margin: 16px auto 40px; max-width: 560px; }
+.btn-appstore {
+  display: inline-block;
+  background: #000; color: #fff;
+  padding: 14px 32px; border-radius: 30px;
+  text-decoration: none; font-size: 17px; font-weight: 500;
+  transition: background .2s;
+}
+.btn-appstore:hover { background: #333; }
+
+/* FEATURES */
+.features {
+  max-width: 960px; margin: 0 auto;
+  padding: 80px 24px;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+}
+.feature { text-align: center; }
+.feature .icon { font-size: 40px; margin-bottom: 16px; }
+.feature h3 { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.feature p { font-size: 15px; color: #555; }
+
+/* SECTION DIVIDER */
+.divider { border: none; border-top: 1px solid #eee; margin: 0 24px; }
+
+/* CONTENT PAGE */
+.page-header {
+  background: linear-gradient(160deg, #f5fff7 0%, #fff 60%);
+  padding: 72px 24px 48px; text-align: center;
+}
+.page-header h1 { font-size: 36px; font-weight: 700; }
+.page-header p { color: #555; margin-top: 12px; }
+
+.content {
+  max-width: 760px; margin: 0 auto; padding: 56px 24px 80px;
+}
+.content h2 { font-size: 22px; font-weight: 600; margin: 40px 0 12px; }
+.content h2:first-child { margin-top: 0; }
+.content p { color: #333; margin-bottom: 14px; }
+.content ul { padding-left: 20px; color: #333; margin-bottom: 14px; }
+.content ul li { margin-bottom: 6px; }
+.content a { color: #1a7a3f; }
+
+/* FOOTER */
+footer {
+  text-align: center; padding: 40px 24px;
+  font-size: 13px; color: #999;
+  border-top: 1px solid #eee;
+}
+footer a { color: #999; text-decoration: none; margin: 0 10px; }
+footer a:hover { color: #555; }
+
+/* LANG TOGGLE */
+[data-lang] { display: none; }
+.zh [data-lang="zh"] { display: block; }
+.zh [data-lang="zh"].inline { display: inline; }
+.en [data-lang="en"] { display: block; }
+.en [data-lang="en"].inline { display: inline; }

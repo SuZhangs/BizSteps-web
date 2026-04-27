@@ -62,6 +62,62 @@ nav {
 .feature h3 { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
 .feature p { font-size: 15px; color: #555; }
 
+/* SCREENSHOTS */
+.screenshots {
+  padding: 64px 0 56px;
+  overflow: hidden;
+}
+.screenshots-label {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: #aaa;
+  margin-bottom: 32px;
+}
+.screenshots-track {
+  display: flex;
+  gap: 24px;
+  padding: 0 40px 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  justify-content: center;
+}
+.screenshots-track::-webkit-scrollbar { height: 4px; }
+.screenshots-track::-webkit-scrollbar-thumb { background: #ddd; border-radius: 2px; }
+
+/* iPhone frame */
+.phone-frame {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: 230px;
+  border-radius: 36px;
+  background: #111;
+  padding: 10px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+  position: relative;
+}
+.phone-frame::before {
+  content: '';
+  display: block;
+  width: 60px; height: 12px;
+  background: #111;
+  border-radius: 0 0 10px 10px;
+  position: absolute;
+  top: 10px; left: 50%; transform: translateX(-50%);
+  z-index: 2;
+}
+.phone-frame img {
+  width: 100%;
+  aspect-ratio: 9 / 19.5;
+  border-radius: 28px;
+  object-fit: cover;
+  display: block;
+  background: #f0f0f0;
+}
+
 /* SECTION DIVIDER */
 .divider { border: none; border-top: 1px solid #eee; margin: 0 24px; }
 

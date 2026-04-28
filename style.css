@@ -117,6 +117,23 @@ nav {
   display: block;
   background: #f0f0f0;
 }
+.screen-placeholder {
+  display: none;
+  width: 100%;
+  aspect-ratio: 9 / 19.5;
+  border-radius: 28px;
+  background: linear-gradient(160deg, #e8f5ec 0%, #c8ecd3 100%);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  color: #5cb878;
+}
+.screen-placeholder span {
+  font-size: 28px;
+  font-weight: 700;
+  opacity: 0.35;
+}
 
 /* SECTION DIVIDER */
 .divider { border: none; border-top: 1px solid #eee; margin: 0 24px; }
